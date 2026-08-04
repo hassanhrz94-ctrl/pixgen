@@ -1,4 +1,5 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -10,10 +11,38 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { useRouter } from "next/navigation";
+
 
 export default function SignUpPage() {
-  const onSubmit = async (e) => {
+
+   const router =useRouter();
+
+  const onSubmit =async(e)=>{
     e.preventDefault();
+    
+    const name=e.target.name.value;
+    const password=e.target.password.value;
+    const image =e.target.image.value;
+    const email=e.target.email.value;
+
+    const {data,error}=await authClient.signUp.email({
+name,
+password,
+image,
+email,
+
+
+    });
+    console.log({data,error})
+
+  
+  if(!error){
+    router.push('/')
+  }
+else{
+  alert('something is wrong')
+}
   };
 
   return (
