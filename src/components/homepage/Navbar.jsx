@@ -3,6 +3,9 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeSwitcher } from "../theme-switcher";
+
+
 
 const Navbar = () => {
  
@@ -68,6 +71,7 @@ const Navbar = () => {
               <Button onClick={handleSignOut} size="sm" variant="danger">SignOut</Button>
             </div>
           )}
+<ThemeSwitcher/>
       </nav>
     </div>
   );
