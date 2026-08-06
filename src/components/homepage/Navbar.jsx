@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ThemeSwitcher } from "../theme-switcher";
 
-
+ 
 
 const Navbar = () => {
  
@@ -49,10 +49,10 @@ const Navbar = () => {
         {!user &&(<div className="flex gap-4">
           <ul className="flex items-center  text-sm gap-2 ">
             <li>
-              <Link href={"/signup"} className='text-blue-400 text-[20px]'>SignUp</Link>
+              <Link href={"/signup"} className='text-blue-400 text-[20px]'><Button variant="primary">Signup</Button></Link>
             </li>
             <li>
-              <Link href={"/signin"} className="text-red-500  text-[20px]">SignIn</Link>
+              <Link href={"/signin"} className="text-red-500  text-[20px]"><Button variant="Secondary">signIn</Button></Link>
             </li>
           </ul>
         </div>)}

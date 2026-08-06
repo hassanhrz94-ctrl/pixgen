@@ -1,11 +1,13 @@
 import Banner from "@/components/homepage/Banner";
 import Footer from "@/components/homepage/Footer";
+import TopGenerations from "@/components/TopGenerations";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
      <Banner/>
+     <TopGenerations/>
      <Footer/>
     </div>
   );

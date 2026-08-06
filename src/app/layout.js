@@ -26,11 +26,11 @@ export default function RootLayout({ children }) {
     >
     <body
   className={`${geistSans.variable} ${geistMono.variable} min-h-full flex flex-col bg-background text-foreground`}
->
+>  
         <Navbar/>
-          <Providers>
+            <main className="max-w-7xl mx-auto">
         {children}
-          </Providers>
+            </main>
         </body>
     </html>
   );
